@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    </link>
+   
+    <script src="./app.js" defer ></script>
+    <title>Bankist App</title>
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <header class="main-header">
+        <div class="main-header__brand">
+            <h1 id="main-header__brand-title">Bankist</h1>
+        </div>
+        <div>
+            <p class="welcome">Login to get started</p>
+        </div>
+        
+        <nav class="main-header__nav">
+            <ul class="main-header__links">
+                <form class="form-control">
+                    <li class="main-header__link"><input type="text" placeholder="User" id="user-account" /></li>
+                    <li class="main-header__link"><input type="text" placeholder="Pin" id="user-pin" /></li>
+                    <button id="submit-button">Login</button>
+                </form>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main -->
+    <main class="app">
+        <!-- Balance-->
+        <section class="app-container" >
+            <article class="balance-container">
+                <div class="current-balance">
+                    <h2 id="current-balance__title">Current Balance</h2>
+                    <p id="current-balance__expirydate">As of <date>0.5/03/2023</date>
+                    </p>
+                </div>
+                <!--Value of Current Balance-->
+                <div class="current-balance>">
+                    <h2 id="current-balance__value">0000$</h2>
+                </div>
+                    
+            </article>
+            <!-- Money transactions UI-->
+            <article class="transactions-container">
+                <div class="transactions-log">
+                    <!--Transaction items-->
+                    <ul class="transactions-log__items">
+
+                        <!--Dynamic render Li-->
+
+                    </ul>
+                    <div class="sort-container">
+                        <button id="button-sort">Sort</button>
+                    </div>
+                </div>
+
+               
+                
+                <!--Transactions actions-->
+
+                <div class="actions">
+                    <!--Transfer money-->
+                    <div class="actions-item transfer-actions">
+                        <form class="form-container">
+                            <p class="action-title">Transfer money</p>
+                            <div class="form-control">
+                                <input class="input-field input-transfer" type="text" id="transfer-to" />
+                                <label for="transfer-to">Transfer to</label>
+                            </div>
+                            <div class="form-control">
+                                <input class="input-field input-transfer" type="text" id="transfer-amount" />
+                                <label for="transfer-amount">Amount</label>
+                            </div>
+                            <div class="form-control__action">
+                                <button class="button-transfer">transfer</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Loan money-->
+                    <div class="actions-item loan-actions">
+                        <form class="form-container">
+
+                            <p class="action-title">Request for loan</p>
+                            <div class="form-control">
+                                <input class="input-field input-loan" type="text" id="loan-amount" />
+                                <label for="transfer-amount">Amount</label>
+                            </div>
+                            <div class="form-control__action">
+                                <button class="button-loan">transfer</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- close account-->
+                    <div class="actions-item close-actions">
+                        <form class="form-container">
+                            <p class="action-title">Close account</p>
+                            <div class="form-control">
+                                <input class="input-field input-close" type="text" id="confirm-user" />
+                                <label for="confirm-user">Confirm user</label>
+                            </div>
+                            <div class="form-control">
+                                <input class="input-field input-close" type="text" id="confirm-pin" />
+                                <label for="confirm-pin">PIN</label>
+                            </div>
+                            <div class="form-control__action">
+                                <button class="button-close">close</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                    
+            </article>
+            <!--- Account Summary -->
+            <article>
+                <div class="transactions-summary">
+                    <div class="deposit-summary">
+                        <span class="summary-label" id="deposit-label">IN</span>&nbsp;<p class="deposit-value">000$</p>
+
+                    </div>
+                    <div class="withdrawal-summary">
+                        <span class="summary-label" id="withdrawal-label">Out</span>&nbsp;<p class="withdrawal-value">
+                            000$</p>
+
+                    </div>
+                    <div class="interest-summary">
+                        <span class="summary-label" id="interest-label">Interest</span>&nbsp;<p class="interest-value">
+                            000$</p>
+
+                    </div>
+                    
+                </div>
+            </article>
+        </section>
+        <!--search container-->
+        <div class="search-container">
+            <form class="form-control">
+                <input type="search" id="input-search" placeholder="search..."/>
+                <button class="button-search">Search</button>
+            </form>
+        </div>
+        <section>
+            <div class='result-container'>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+    </footer>
+
+    
+</body>
+
+</html>
